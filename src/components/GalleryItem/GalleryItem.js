@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import GalleryList from '../GalleryList/GalleryList';
 
-
-class GalleryList extends Component {
+class GalleryItem extends Component {
   
   
 
@@ -16,10 +16,13 @@ class GalleryList extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.props.galleryList.map( picture =>
+            {/* {this.props.galleryList.map( picture =>
                 <tr key={picture.id}><td><img alt="domRender" src={picture.path}/>Description: {picture.description} ID: {picture.id} Likes: {picture.likes}</td>
                 
                 </tr>
+              )} */}
+                {/* <GalleryList galleryList={this.props.path}/> */}
+               
               )}
             </tbody>
           </table>
@@ -28,4 +31,4 @@ class GalleryList extends Component {
   }
 }
 
-export default GalleryList;
+export default GalleryItem;
