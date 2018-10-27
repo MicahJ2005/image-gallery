@@ -26,8 +26,18 @@
 img{
   height: 100px;
   width: 200px;
+
 }
 
 .list{
   align-items: right;
+}
+
+li{
+  list-style: none;
+}
+
+.container{
+  display: inline-block;
+  border-block-end-color: black;
 }

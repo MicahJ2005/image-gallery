@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+// import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
   
@@ -27,13 +28,16 @@ class App extends Component {
   }
 
   render() {
+    
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
           <div className="list">
-              <GalleryList galleryList={this.state.galleryList}/>
+              <GalleryList galleryList={this.state.galleryList} getGallery={this.getGallery}/>
+              
+              
           </div>
               
       </div>
