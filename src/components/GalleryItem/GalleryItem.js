@@ -11,7 +11,7 @@ class GalleryItem extends Component {
     
 
     displayPicture = () => {
-        if(this.state.displayImage){
+        if(this.state.showPicture === true){
         return <ul><img alt="DOMimage" src={this.props.path}/></ul>
     }
         else{
@@ -20,18 +20,16 @@ class GalleryItem extends Component {
     }
 
     handleToggleClick() {
+        console.log('in handleClick');
         this.setState(state => ({
-        showPicture: state.showPicture
+        showPicture: !state.showPicture
         }));
     }
 
     render() {
         return (
-          <div>
-              
-              <button onClick={this.handleToggleClick}>
+          <div className="domImages" onClick={this.handleToggleClick}>
               {this.displayPicture()}
-              </button>
           </div>
             // <section>
             //   <table>
