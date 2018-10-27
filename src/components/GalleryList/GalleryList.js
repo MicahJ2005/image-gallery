@@ -17,7 +17,8 @@ class GalleryList extends Component {
             </thead>
             <tbody>
               {this.props.galleryList.map( picture =>
-                <tr key={picture.id}><td><img alt="domRender" src={picture.path}/></td>
+                <tr key={picture.id}><td><img alt="domRender" src={picture.path}/>Description: {picture.description} ID:{picture.id} Likes: {picture.likes}</td>
+                
                 </tr>
               )}
             </tbody>
