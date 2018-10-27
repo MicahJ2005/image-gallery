@@ -12,7 +12,8 @@ class GalleryItem extends Component {
         this.handleToggleClick = this.handleToggleClick.bind(this);
     }
     
-
+    ///displayPicture function is running and if/else statement to render either either the picture, or the description,
+    /// based on the the showPicture boolean defined in the constructor
     displayPicture = () => {
         if(this.state.showPicture === true){
         return <div><img className="domImages" alt="DOMimage" src={this.props.path}/></div>
@@ -24,9 +25,7 @@ class GalleryItem extends Component {
             
         }
     }
-
-    
-
+/// handleToggleClick function is toggling back and forth between a picture and description
     handleToggleClick() {
         console.log('in handleClick');
         this.setState(state => ({
@@ -34,25 +33,7 @@ class GalleryItem extends Component {
         }));
     }
 
-    // handleLikeClick = (props) => {
-    //     console.log('in LIKE Click', props);
-    //     axios({
-    //         method: 'PUT',
-    //         url: `/gallery/like/${props}`,
-    //         data: {
-    //             likes: this.props.likes
-    //         }
-    //     })
-    //     .then( (response) => {
-    //         console.log('POST response', response);
-    //         this.props.getGallery();
-    //     })
-    //     .catch( function(error){
-    //         console.log('POST Error', error);
-            
-    //     })
-    //     }
-
+    /// rendering number of likes clicked
     render() {
         return (
           <div className="container" >

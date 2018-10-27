@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
-// import GalleryItem from '../GalleryItem/GalleryItem';
+// listing all imports need to speak to this js file
 
 class App extends Component {
-  
+  /// setting state with my galleryList array
   state = {
     galleryList: []
 
   }
+  ///mounting the components of my getGallery function
   componentDidMount() {
     this.getGallery();
   }
 
+  //Running getGallery axios to obtain gallery data from the galleryList
   getGallery = () => {
     axios.get('/gallery')
     .then( response => {
@@ -26,7 +28,7 @@ class App extends Component {
       alert('Error', error);
     })
   }
-
+/// rendering info from GalleryList
   render() {
     
     return (

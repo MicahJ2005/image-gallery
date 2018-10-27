@@ -5,6 +5,6 @@ const galleryItems = [
     { id: 4, path: 'images/guitar.png', description: 'Photo of an acoustic guitar.', likes: 0 },
     { id: 5, path: 'images/tibetan-mastiff.jpeg', description: 'Photo of a Tibetan Mastiff.', likes: 0 }
 ];
-
+////added 4 additional items to the galletyItems array
 
 module.exports = galleryItems;
