@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 
 class GalleryItem extends Component {
   
-    state = {
-        displayImage: true
+    constructor(props) {
+        super(props);
+        this.state = {showPicture: true}
+        this.handleToggleClick = this.handleToggleClick.bind(this);
     }
+    
 
     displayPicture = () => {
         if(this.state.displayImage){
@@ -16,10 +19,19 @@ class GalleryItem extends Component {
         }
     }
 
+    handleToggleClick() {
+        this.setState(state => ({
+        showPicture: state.showPicture
+        }));
+    }
+
     render() {
         return (
           <div>
+              
+              <button onClick={this.handleToggleClick}>
               {this.displayPicture()}
+              </button>
           </div>
             // <section>
             //   <table>
