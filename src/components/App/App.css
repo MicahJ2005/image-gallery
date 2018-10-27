@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: gray;
 }
 
 .App-header {
@@ -7,6 +8,7 @@
   height: 70px;
   padding: 20px;
   color: white;
+
 }
 
 .App-title {
@@ -24,9 +26,9 @@
 }
 
 img{
-  height: 100px;
-  width: 200px;
-
+  height: 150px;
+  width: 250px;
+  padding:30px;
 }
 
 .list{
@@ -39,5 +41,10 @@ li{
 
 .container{
   display: inline-block;
-  border-block-end-color: black;
+  border: 30px;
+  padding-block-end: 30px
+}
+
+div{
+  font-size: 30px;
 }

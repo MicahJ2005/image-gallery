@@ -16,12 +16,12 @@ class GalleryItem extends Component {
     /// based on the the showPicture boolean defined in the constructor
     displayPicture = () => {
         if(this.state.showPicture === true){
-        return <div><img className="domImages" alt="DOMimage" src={this.props.path}/></div>
+        return <div className="container" ><img className="domImages" alt="DOMimage" src={this.props.path}/></div>
                 
                 
     }
         else{
-            return <div>{this.props.description}</div>
+            return <div className="container" >{this.props.description}</div>
             
         }
     }
