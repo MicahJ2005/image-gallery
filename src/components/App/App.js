@@ -32,8 +32,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
+          <div className="list">
               <GalleryList galleryList={this.state.galleryList}/>
-
+          </div>
               
       </div>
     );

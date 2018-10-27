@@ -11,6 +11,7 @@
 
 .App-title {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {
@@ -25,4 +26,8 @@
 img{
   height: 100px;
   width: 200px;
+}
+
+.list{
+  align-items: right;
 }

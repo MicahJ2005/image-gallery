@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import GalleryItem from '../GalleryItem/GalleryItem'
 
 class GalleryList extends Component {
   
@@ -9,22 +9,15 @@ class GalleryList extends Component {
     return (
       
         <section>
-          <table>
-            <thead>
-              <tr>
-                <th>My Gallery</th>
-              </tr>
-            </thead>
-            <tbody>
+          
+                <h2>My Gallery</h2>
+              
               {this.props.galleryList.map( picture =>
-                <tr key={picture.id}><td><img alt="domRender" src={picture.path}/>Description: {picture.description} ID: {picture.id} Likes: {picture.likes}</td>
-                
-                </tr>
+                <GalleryItem key={picture.id} path={picture.path} description={picture.description} likes={picture.likes} />
               )}
-            </tbody>
-          </table>
+            
         </section>
-    );
+    )
   }
 }
 
