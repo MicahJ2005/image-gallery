@@ -1,5 +1,20 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import Badge from '@material-ui/core/Badge';
 
+
+const styles = theme => ({
+    margin: {
+      margin: theme.spacing.unit * 2,
+    },
+    padding: {
+      padding: `0 ${theme.spacing.unit * 2}px`,
+    },
+    button: {
+        margin: theme.spacing.unit,
+      },
+  });
 
 class GalleryItem extends Component {
   
@@ -32,19 +47,24 @@ class GalleryItem extends Component {
         showPicture: !state.showPicture
         }));
     }
-
+    
+    
+      
     /// rendering number of likes clicked
     render() {
+        
         return (
           <div className="container" >
               <li onClick={this.handleToggleClick}>{this.displayPicture()}</li>
               <li>Likes: {this.props.likes}</li>
-                <li><button onClick={() => this.props.handleLikeClick(this.props.id)} className="likeButton">Like!</button></li>
+              <li><Badge color="primary" badgeContent={this.props.likes} ><Button onClick={() => this.props.handleLikeClick(this.props.id)} className="likeButton" color="primary" variant="outlined">Like!</Button></Badge></li>
           </div>
             
         );
       }
 }
+// render.propTypes = {
+//     classes: PropTypes.object.isRequired,
+//   };
 
-
-export default GalleryItem;
+export default withStyles(styles) (GalleryItem);
