@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
-import Card from '@material-ui/core/Card';
+import GridList from '@material-ui/core/GridList';
 
 
 const styles = theme => ({
@@ -15,10 +15,7 @@ const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
       },
-    card: {
-        minWidth: 275,
-        
-      },
+    
   });
 
 class GalleryItem extends Component {
@@ -36,12 +33,12 @@ class GalleryItem extends Component {
     /// based on the the showPicture boolean defined in the constructor
     displayPicture = () => {
         if(this.state.showPicture === true){
-        return <Card><div className="container" ><img className="domImages" alt="DOMimage" src={this.props.path}/></div></Card>
+        return <GridList><div className="container" ><img className="domImages" alt="DOMimage" src={this.props.path}/></div></GridList>
                 
                 
     }
         else{
-            return <Card><div className="container" >{this.props.description}</div></Card>
+            return <GridList><div className="container" >{this.props.description}</div></GridList>
             
         }
     }
